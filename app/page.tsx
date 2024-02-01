@@ -6,12 +6,16 @@ import useTranslation from "./hooks/useTranslation";
 import React from "react";
 export default function Home() {
   const [lang, setLang] = React.useState("en");
+  const [pageHeight, setPageHeight] = React.useState(0);
   const x: any = useTranslation("home", lang);
 
+  React.useEffect(() => {
+    setPageHeight(window?.innerHeight);
+  });
   return (
     <main
       className="bg-[#fff5e9] w-screen flex flex-col justify-between items-center"
-      style={{ height: window?.innerHeight }}
+      style={{ height: pageHeight || "100vh" }}
     >
       <div className="w-full p-3 pb-0 md:p-6 md:pb-0">
         <div className="flex w-full items-center justify-between">
