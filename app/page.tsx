@@ -28,7 +28,7 @@ export default function Home() {
           />
         </div>
         <div className="flex w-full items-center justify-between gap-4 mt-4">
-          <p className="text-left text-[#94c8e0] text-lg lg:text-2xl font-bold origin-top">
+          <p className="text-left text-[#94c8e0] text-base sm:text-lg lg:text-2xl font-bold origin-top">
             {x?.early}
           </p>
           <LangSelect lang={lang} setLang={setLang} />

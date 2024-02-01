@@ -3,10 +3,13 @@ import Image from "next/image";
 
 export default function LangSelect({ setLang, lang }: any) {
   return (
-    <div className="flex items-center">
+    <div className="flex items-center gap-2">
       <button
         className={classNames(
-          "flex items-center gap-2 hover:bg-primary px-2 py-1 text-sm rounded sm:text-base"
+          "flex items-center gap-2 hover:bg-primary px-2 py-1 text-sm rounded sm:text-base",
+          {
+            "bg-primary": lang == "ar",
+          }
         )}
         onClick={() => {
           setLang("ar");
@@ -25,7 +28,10 @@ export default function LangSelect({ setLang, lang }: any) {
       </button>
       <button
         className={classNames(
-          "flex items-center gap-2 hover:bg-primary px-2 py-1 text-sm rounded sm:text-base"
+          "flex items-center gap-2 hover:bg-primary px-2 py-1 text-sm rounded sm:text-base",
+          {
+            "bg-primary": lang == "en",
+          }
         )}
         onClick={() => {
           setLang("en");
