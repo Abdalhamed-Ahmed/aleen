@@ -21,7 +21,7 @@ export default function StepOne({
     const errors: any = {};
     if (!values.studentFullName) {
       errors.studentFullName = data?.error;
-    } else if (values.studentFullName.split(" ").length < 3) {
+    } else if (values.studentFullName.trim().split(" ").length < 3) {
       errors.studentFullName = data?.errorLength;
     }
     return errors;

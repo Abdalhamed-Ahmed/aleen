@@ -20,6 +20,8 @@ export default function ChildrenCPRNumber({
     const errors: any = {};
     if (!values.CPR) {
       errors.CPR = data?.error;
+    } else if(values.CPR.length !== 9){
+      errors.CPR = data?.min
     }
     return errors;
   };

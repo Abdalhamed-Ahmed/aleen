@@ -23,6 +23,7 @@ export const en = {
     label: "Enter your child's CPR Number",
     error: "Please Enter your child's CPR number",
     inputPlaceholder: "Type your answer here...",
+    min: "CPR number must be 9 digits",
   },
   childDate: {
     label: "Child Date of Birth",
