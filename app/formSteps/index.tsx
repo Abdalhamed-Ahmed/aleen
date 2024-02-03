@@ -21,7 +21,7 @@ import Successfully from "./Successfully";
 import LangSelect from "./LangSelector";
 
 export default function FormSteps({ lang }: any) {
-  const [activeStep, changeActiveStep] = React.useState(0);
+  const [activeStep, changeActiveStep] = React.useState(10);
   const [formData, setFormData] = React.useState({});
 
   return (

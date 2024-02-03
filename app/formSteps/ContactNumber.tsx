@@ -20,6 +20,8 @@ export default function ContactNumber({
     const errors: any = {};
     if (!values.contactNumber) {
       errors.contactNumber = data?.error;
+    } else if (values.contactNumber.length != 8) {
+      errors.contactNumber = data?.lengthError;
     }
     return errors;
   };

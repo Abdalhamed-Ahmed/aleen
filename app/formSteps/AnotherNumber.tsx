@@ -39,9 +39,21 @@ export default function AnotherNumber({
       .catch((err) => console.log(err));
   };
 
+  const validates = (values: any) => {
+    const errors: any = {};
+    if (
+      values.anotherContactNumber &&
+      values.anotherContactNumber.length != 8
+    ) {
+      errors.anotherContactNumber = data?.lengthError;
+    }
+    return errors;
+  };
+
   return (
     <Form
       onSubmit={submitForm}
+      validate={validates}
       render={(props) => (
         <form id="form11" className="w-full" onSubmit={props.handleSubmit}>
           <Field name="anotherContactNumber" type="number">

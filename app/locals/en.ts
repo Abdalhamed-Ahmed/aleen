@@ -69,11 +69,13 @@ export const en = {
     label: "Enter your phone number",
     error: "Please Enter your phone number",
     inputPlaceholder: "Type your answer here...",
+    lengthError: "Invalid phone number, Please enter a valid one",
   },
   anotherNumber: {
     label: "Enter another phone number (optional)",
     inputPlaceholder: "Type your answer here...",
     submit: "Student data is being registered",
+    lengthError: "Invalid phone number, Please enter a valid one",
   },
   success: {
     title: "Your student data has been submitted",
